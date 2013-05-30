@@ -272,7 +272,7 @@ fi
 # Determine output to use if not forced
 # Also sets pulse-server if detected
 # PULSE_SERVER, oss, padsp, aoss, log set, error
-if [ -n $_set_output ]; then
+if [ -z $_set_output ]; then
     if [ -n "$PULSE_SERVER" ] && [ -x "$_padsp" ]; then
         _set_output="pulse-server"
     elif [ -w /dev/dsp ]; then
